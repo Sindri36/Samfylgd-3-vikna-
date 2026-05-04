@@ -1,0 +1,226 @@
+/* ── Reset ── */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ── Base ── */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: #f4f6f9;
+  color: #1a1a1a;
+  min-height: 100vh;
+}
+
+/* ── Header ── */
+header {
+  background: #ffffff;
+  border-bottom: 1px solid #e3e6ea;
+  padding: 16px 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0a3d62;
+  letter-spacing: -0.5px;
+}
+
+nav {
+  display: flex;
+  gap: 8px;
+}
+
+nav button {
+  background: transparent;
+  border: none;
+  padding: 10px 18px;
+  font-size: 15px;
+  color: #2c3e50;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+nav button:hover { background: #eef2f7; }
+
+/* ── Buttons ── */
+.primary {
+  background: #0a3d62 !important;
+  color: white !important;
+}
+.primary:hover { background: #082f4a !important; }
+
+/* ── Main / Hero ── */
+main {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 32px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: #0a3d62;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 18px;
+  color: #5a6877;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── Cards ── */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card {
+  background: white;
+  padding: 28px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #eaedf1;
+}
+
+.card h3 {
+  color: #0a3d62;
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.card p {
+  color: #5a6877;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ── Modals ── */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.2s;
+}
+
+.modal-overlay.show { display: flex; }
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.modal--centered { text-align: center; }
+
+.welcome-icon {
+  font-size: 64px;
+  margin-bottom: 12px;
+}
+
+.close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: #999;
+  cursor: pointer;
+  padding: 4px 10px;
+  border-radius: 4px;
+}
+
+.close:hover { background: #f4f6f9; }
+
+.modal h2 {
+  color: #0a3d62;
+  margin-bottom: 8px;
+  font-size: 24px;
+}
+
+.modal .sub {
+  color: #5a6877;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+/* ── Form ── */
+label {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="tel"] {
+  width: 100%;
+  padding: 14px 16px;
+  font-size: 18px;
+  border: 2px solid #d8dde3;
+  border-radius: 8px;
+  outline: none;
+  letter-spacing: 1px;
+  font-family: inherit;
+  transition: border-color 0.15s;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus { border-color: #0a3d62; }
+
+.submit-btn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 14px;
+  background: #0a3d62;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.submit-btn:hover { background: #082f4a; }
+
+.helper {
+  font-size: 12px;
+  color: #8a96a3;
+  margin-top: 8px;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 13px;
+  margin-top: 10px;
+  display: none;
+}
+
+.error.show { display: block; }

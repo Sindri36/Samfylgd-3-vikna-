@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samfylgd</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">Samfylgd</div>
+  <nav>
+    <button>Forsíða</button>
+    <button>Þjónusta</button>
+    <button>Um okkur</button>
+    <button class="primary" id="openLogin">Mínar síður</button>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Velkomin á Samfylgd</h1>
+    <p>Þín stafræna gátt að persónulegri þjónustu. Skráðu þig inn á Mínar síður til að hefjast handa.</p>
+  </div>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Yfirlit</h3>
+      <p>Skoðaðu stöðu þína, samninga og virkar beiðnir á einum stað.</p>
+    </div>
+    <div class="card">
+      <h3>Skilríki</h3>
+      <p>Aðgangur að rafrænum skilríkjum og auðkenningu á öruggan hátt.</p>
+    </div>
+    <div class="card">
+      <h3>Samskipti</h3>
+      <p>Hafðu samband við þjónustufulltrúa og fáðu svör hratt.</p>
+    </div>
+  </div>
+</main>
+
+<!-- Login Modal -->
+<div class="modal-overlay" id="modal">
+  <div class="modal">
+    <button class="close" id="closeModal">&times;</button>
+    <h2>Innskráning</h2>
+    <p class="sub">Sláðu inn símanúmer til að halda áfram með rafrænum skilríkjum.</p>
+
+    <label for="phone">Símanúmer</label>
+    <input type="tel" id="phone" placeholder="0000000" autocomplete="off" maxlength="7">
+    <p class="helper">Sjö stafa íslenskt símanúmer.</p>
+    <p class="error" id="errorMsg">Ógilt númer. Vinsamlegast reyndu aftur.</p>
+
+    <button class="submit-btn" id="submitBtn">Halda áfram</button>
+  </div>
+</div>
+
+<!-- Welcome Modal -->
+<div class="modal-overlay" id="welcomeModal">
+  <div class="modal modal--centered">
+    <button class="close" id="closeWelcome">&times;</button>
+    <div class="welcome-icon">👋</div>
+    <h2>Halló!</h2>
+    <p class="sub">Þú ert kominn inn á Mínar síður.</p>
+    <button class="submit-btn" id="logoutBtn">Skrá út</button>
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
