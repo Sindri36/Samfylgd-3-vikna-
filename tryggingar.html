@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samfylgd – Tryggingar</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="front-page.html">Samfylgd</a>
+  <nav>
+    <button onclick="window.location.href='minar-sidur.html'">Mínar síður</button>
+    <button class="primary" onclick="window.location.href='front-page.html'">Skrá út</button>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Tryggingar</h1>
+    <p>Yfirlit yfir tryggingavernd þína og gildistíma.</p>
+  </div>
+
+  <div class="table-wrapper" style="max-width:760px; margin: 0 auto 60px;">
+    <table class="rx-table">
+      <thead>
+        <tr>
+          <th>Trygging</th>
+          <th>Númer</th>
+          <th>Gildistími</th>
+        </tr>
+      </thead>
+      <tbody id="tryggingarBody"></tbody>
+    </table>
+  </div>
+</main>
+
+<script src="js/expiry.js"></script>
+<script src="js/tryggingar.js"></script>
+</body>
+</html>
