@@ -244,3 +244,30 @@ input[type="tel"]:focus { border-color: #0a3d62; }
   font-size: 36px;
   margin-bottom: 12px;
 }
+
+/* ── Active nav item ── */
+nav button.active {
+  background: #eef2f7;
+  color: #0a3d62;
+  font-weight: 600;
+}
+
+/* ── Prose (long-form text) ── */
+.prose {
+  max-width: 680px;
+  margin: 0 auto 60px;
+  padding: 40px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #eaedf1;
+}
+
+.prose p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: #3a4a5a;
+  margin-bottom: 24px;
+}
+
+.prose p:last-child { margin-bottom: 0; }
