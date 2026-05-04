@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samfylgd – Samskipti</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">Samfylgd</a>
+  <nav>
+    <button onclick="window.location.href='um-okkur.html'">Um okkur</button>
+    <button class="primary" onclick="window.location.href='index.html'">Mínar síður</button>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Samskipti</h1>
+    <p>Hvernig getum við aðstoðað þig? Veldu þá leið sem hentar þér best.</p>
+  </div>
+
+  <div class="contact-grid">
+
+    <!-- Send message -->
+    <div class="card contact-card">
+      <div class="card-icon">✉️</div>
+      <h3>Sendu skilaboð</h3>
+      <p class="card-desc">Fyrir einföld spurningar og fyrirspurnir. Við svörum innan 24 klukkustunda.</p>
+
+      <form class="contact-form" id="messageForm" novalidate>
+        <div class="form-group">
+          <label for="msgName">Nafn</label>
+          <input type="text" id="msgName" placeholder="Nafn þitt" required>
+        </div>
+        <div class="form-group">
+          <label for="msgEmail">Netfang</label>
+          <input type="text" id="msgEmail" placeholder="netfang@dæmi.is" required>
+        </div>
+        <div class="form-group">
+          <label for="msgText">Skilaboð</label>
+          <textarea id="msgText" rows="4" placeholder="Skrifaðu spurninguna þína hér..." required></textarea>
+        </div>
+        <button type="submit" class="submit-btn">Senda skilaboð</button>
+        <p class="form-success" id="msgSuccess">Skilaboð móttekin. Við höfum samband fljótlega.</p>
+      </form>
+    </div>
+
+    <!-- Schedule call -->
+    <div class="card contact-card">
+      <div class="card-icon">📞</div>
+      <h3>Bókaðu símtal</h3>
+      <p class="card-desc">Fyrir flóknari mál þar sem persónuleg aðstoð hentar betur.</p>
+
+      <form class="contact-form" id="callForm" novalidate>
+        <div class="form-group">
+          <label for="callName">Nafn</label>
+          <input type="text" id="callName" placeholder="Nafn þitt" required>
+        </div>
+        <div class="form-group">
+          <label for="callPhone">Símanúmer</label>
+          <input type="tel" id="callPhone" placeholder="0000000" maxlength="7" required>
+        </div>
+        <div class="form-group">
+          <label for="callDate">Dagsetning</label>
+          <input type="date" id="callDate" required>
+        </div>
+        <div class="form-group">
+          <label for="callTime">Tími</label>
+          <select id="callTime" required>
+            <option value="" disabled selected>Veldu tíma</option>
+            <option>09:00</option>
+            <option>10:00</option>
+            <option>11:00</option>
+            <option>13:00</option>
+            <option>14:00</option>
+            <option>15:00</option>
+          </select>
+        </div>
+        <button type="submit" class="submit-btn">Bóka símtal</button>
+        <p class="form-success" id="callSuccess">Símtal bókað. Við hringum á þig á völdum tíma.</p>
+      </form>
+    </div>
+
+  </div>
+</main>
+
+<script src="js/samskipti.js"></script>
+</body>
+</html>
