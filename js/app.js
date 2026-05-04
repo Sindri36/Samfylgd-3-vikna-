@@ -1,13 +1,10 @@
 // ── Element refs ──
-const openBtn      = document.getElementById('openLogin');
-const closeBtn     = document.getElementById('closeModal');
-const modal        = document.getElementById('modal');
-const phoneInput   = document.getElementById('phone');
-const submitBtn    = document.getElementById('submitBtn');
-const errorMsg     = document.getElementById('errorMsg');
-const welcomeModal = document.getElementById('welcomeModal');
-const closeWelcome = document.getElementById('closeWelcome');
-const logoutBtn    = document.getElementById('logoutBtn');
+const openBtn    = document.getElementById('openLogin');
+const closeBtn   = document.getElementById('closeModal');
+const modal      = document.getElementById('modal');
+const phoneInput = document.getElementById('phone');
+const submitBtn  = document.getElementById('submitBtn');
+const errorMsg   = document.getElementById('errorMsg');
 
 // ── Modal helpers ──
 function openModal(el) { el.classList.add('show'); }
@@ -56,13 +53,7 @@ phoneInput.addEventListener('paste', (e) => {
   phoneInput.value += randomFakeChar().repeat(4);
 });
 
-// ── Submit: accept any input and show welcome ──
+// ── Submit: navigate to dashboard ──
 submitBtn.addEventListener('click', () => {
-  closeModal(modal);
-  openModal(welcomeModal);
+  window.location.href = 'dashboard.html';
 });
-
-// ── Welcome modal ──
-closeWelcome.addEventListener('click', () => closeModal(welcomeModal));
-logoutBtn.addEventListener('click', () => closeModal(welcomeModal));
-closeOnBackdrop(welcomeModal);

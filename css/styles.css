@@ -25,6 +25,8 @@ header {
   font-weight: 700;
   color: #0a3d62;
   letter-spacing: -0.5px;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 nav {
@@ -224,3 +226,21 @@ input[type="tel"]:focus { border-color: #0a3d62; }
 }
 
 .error.show { display: block; }
+
+/* ── Card as button ── */
+.card--btn {
+  cursor: pointer;
+  text-align: left;
+  width: 100%;
+  transition: box-shadow 0.15s, transform 0.15s;
+}
+
+.card--btn:hover {
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transform: translateY(-2px);
+}
+
+.card-icon {
+  font-size: 36px;
+  margin-bottom: 12px;
+}
