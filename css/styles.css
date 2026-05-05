@@ -461,6 +461,98 @@ select:focus { border-color: #0a3d62; }
 .exp-orange { background: #fef5e7; color: #d35400; }
 .exp-red    { background: #fdedec; color: #c0392b; }
 
+/* ── Renew link in table ── */
+.rx-renew {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0a3d62;
+  text-decoration: none;
+  border-bottom: 1px dashed #0a3d62;
+  padding-bottom: 1px;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+.rx-renew:hover {
+  color: #082f4a;
+  border-bottom-color: transparent;
+}
+
+/* ── Renew modal ── */
+.renew-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.renew-saved {
+  background: #f4f6f9;
+  border-radius: 8px;
+  padding: 16px 18px;
+  margin-bottom: 16px;
+}
+
+.renew-saved-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
+  border-bottom: 1px solid #e3e6ea;
+}
+
+.renew-saved-row:last-child { border-bottom: none; }
+
+.renew-label {
+  font-size: 13px;
+  color: #5a6877;
+  font-weight: 600;
+}
+
+.renew-value {
+  font-size: 15px;
+  color: #1a1a1a;
+  text-align: right;
+}
+
+.renew-phone {
+  color: #0a3d62;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.renew-phone:hover { text-decoration: underline; }
+
+.renew-actions {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.btn-secondary,
+.btn-danger {
+  flex: 1;
+  padding: 10px 14px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.btn-secondary {
+  background: #eef2f7;
+  color: #0a3d62;
+}
+
+.btn-secondary:hover { background: #dde3ec; }
+
+.btn-danger {
+  background: #fdedec;
+  color: #c0392b;
+}
+
+.btn-danger:hover { background: #f9d7d4; }
+
 /* ── Table sections (læknatímar) ── */
 .table-section {
   max-width: 900px;

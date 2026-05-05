@@ -29,12 +29,50 @@
           <th>Lyf</th>
           <th>Seðilsnúmer</th>
           <th>Gildistími</th>
+          <th>Endurnýjun</th>
         </tr>
       </thead>
       <tbody id="rxBody"></tbody>
     </table>
   </div>
 </main>
+
+<!-- ── Renewal modal ── -->
+<div class="modal-overlay" id="renewModal">
+  <div class="modal">
+    <button class="close" id="renewClose" aria-label="Loka">×</button>
+    <h2 id="renewTitle">Endurnýja lyfjaseðil</h2>
+    <p class="sub" id="renewSub">Skráðu lækni eða stofnun til að hafa samband við.</p>
+
+    <div id="renewSaved" class="renew-saved" style="display:none;">
+      <div class="renew-saved-row">
+        <span class="renew-label">Læknir / stofnun</span>
+        <span class="renew-value" id="renewSavedName"></span>
+      </div>
+      <div class="renew-saved-row">
+        <span class="renew-label">Símanúmer</span>
+        <a class="renew-value renew-phone" id="renewSavedPhone" href="#"></a>
+      </div>
+      <div class="renew-actions">
+        <button type="button" class="btn-secondary" id="renewEdit">Breyta</button>
+        <button type="button" class="btn-danger" id="renewDelete">Eyða</button>
+      </div>
+    </div>
+
+    <form id="renewForm" class="renew-form">
+      <div class="form-group">
+        <label for="renewName">Nafn læknis eða stofnunar</label>
+        <input type="text" id="renewName" placeholder="t.d. Heilsugæslan Garðabæ" required>
+      </div>
+      <div class="form-group">
+        <label for="renewPhone">Símanúmer</label>
+        <input type="tel" id="renewPhone" placeholder="t.d. 555 1234" required>
+      </div>
+      <p class="error" id="renewError">Vinsamlegast fylltu út bæði nafn og símanúmer.</p>
+      <button type="submit" class="submit-btn">Vista</button>
+    </form>
+  </div>
+</div>
 
 <script src="js/lyfseðlar.js"></script>
 </body>
