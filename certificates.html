@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samfylgd – Vottorð</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="front-page.html">Samfylgd</a>
+  <nav>
+    <button onclick="window.location.href='my-pages.html'">Mínar síður</button>
+    <button class="primary" onclick="window.location.href='front-page.html'">Skrá út</button>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Vottorð</h1>
+    <p>Yfirlit yfir læknis- og örorkuvottorð þín. Þú getur sótt um endurnýjun hér.</p>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="rx-table" id="certTable">
+      <thead>
+        <tr>
+          <th>Tegund vottorðs</th>
+          <th>Númer</th>
+          <th>Gildistími</th>
+          <th>Endurnýjun</th>
+        </tr>
+      </thead>
+      <tbody id="certBody"></tbody>
+    </table>
+  </div>
+</main>
+
+<!-- ── Renewal modal ── -->
+<div class="modal-overlay" id="certModal">
+  <div class="modal">
+    <button class="close" id="certClose" aria-label="Loka">×</button>
+    <h2 id="certTitle">Sækja um nýtt vottorð</h2>
+    <p class="sub" id="certSub">Sendu umsókn til útgefanda vottorðsins.</p>
+
+    <div class="renew-saved" id="certDetails">
+      <div class="renew-saved-row">
+        <span class="renew-label">Tegund</span>
+        <span class="renew-value" id="certDetailName"></span>
+      </div>
+      <div class="renew-saved-row">
+        <span class="renew-label">Númer</span>
+        <span class="renew-value" id="certDetailId"></span>
+      </div>
+      <div class="renew-saved-row">
+        <span class="renew-label">Útgefandi</span>
+        <span class="renew-value" id="certDetailIssuer"></span>
+      </div>
+      <div class="renew-saved-row">
+        <span class="renew-label">Núverandi gildistími</span>
+        <span class="renew-value" id="certDetailExpiry"></span>
+      </div>
+    </div>
+
+    <form id="certForm" class="renew-form">
+      <div class="form-group">
+        <label for="certReason">Ástæða umsóknar</label>
+        <textarea id="certReason" rows="3" placeholder="Stutt lýsing — t.d. áframhaldandi meðferð, umsókn um bætur..." required></textarea>
+      </div>
+      <p class="error" id="certError">Vinsamlegast skrifaðu stutta ástæðu fyrir umsókninni.</p>
+      <button type="submit" class="submit-btn">Senda umsókn</button>
+    </form>
+
+    <p class="success-msg" id="certSuccess">Umsókn send.</p>
+  </div>
+</div>
+
+<script src="js/expiry.js"></script>
+<script src="js/certificates.js"></script>
+</body>
+</html>
