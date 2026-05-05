@@ -55,5 +55,5 @@ phoneInput.addEventListener('paste', (e) => {
 
 // ── Submit: navigate to dashboard ──
 submitBtn.addEventListener('click', () => {
-  window.location.href = 'minar-sidur.html';
+  window.location.href = 'my-pages.html';
 });
