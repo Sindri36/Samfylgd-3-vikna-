@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samfylgd – Bætur</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="front-page.html">Samfylgd</a>
+  <nav>
+    <button onclick="window.location.href='my-pages.html'">Mínar síður</button>
+    <button class="primary" onclick="window.location.href='front-page.html'">Skrá út</button>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Bætur</h1>
+    <p>Yfirlit yfir bætur sem þú átt rétt á. Þú getur endurnýjað þær hér.</p>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="rx-table" id="compTable">
+      <thead>
+        <tr>
+          <th>Tegund bóta</th>
+          <th>Númer</th>
+          <th>Gildistími</th>
+          <th>Endurnýjun</th>
+        </tr>
+      </thead>
+      <tbody id="compBody"></tbody>
+    </table>
+  </div>
+</main>
+
+<!-- ── Renewal modal ── -->
+<div class="modal-overlay" id="compModal">
+  <div class="modal">
+    <button class="close" id="compClose" aria-label="Loka">×</button>
+    <h2 id="compTitle">Endurnýja bætur</h2>
+    <p class="sub" id="compSub">Staðfestu endurnýjun fyrir næsta tímabil.</p>
+
+    <div class="renew-saved" id="compDetails">
+      <div class="renew-saved-row">
+        <span class="renew-label">Tegund</span>
+        <span class="renew-value" id="compDetailName"></span>
+      </div>
+      <div class="renew-saved-row">
+        <span class="renew-label">Númer</span>
+        <span class="renew-value" id="compDetailId"></span>
+      </div>
+      <div class="renew-saved-row">
+        <span class="renew-label">Stofnun</span>
+        <span class="renew-value" id="compDetailAgency"></span>
+      </div>
+      <div class="renew-saved-row">
+        <span class="renew-label">Núverandi gildistími</span>
+        <span class="renew-value" id="compDetailExpiry"></span>
+      </div>
+      <div class="renew-saved-row">
+        <span class="renew-label">Nýr gildistími eftir endurnýjun</span>
+        <span class="renew-value" id="compDetailNew"></span>
+      </div>
+    </div>
+
+    <p class="success-msg" id="compSuccess">Endurnýjun staðfest.</p>
+    <p class="error" id="compError">Ekki tókst að endurnýja. Reyndu aftur.</p>
+
+    <div class="renew-actions" id="compActionRow">
+      <button type="button" class="btn-secondary" id="compCancel">Hætta við</button>
+      <button type="button" class="submit-btn" id="compConfirm" style="margin-top:0;">Staðfesta endurnýjun</button>
+    </div>
+  </div>
+</div>
+
+<script src="js/expiry.js"></script>
+<script src="js/compensation.js"></script>
+</body>
+</html>

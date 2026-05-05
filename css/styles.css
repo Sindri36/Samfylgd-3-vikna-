@@ -553,6 +553,32 @@ select:focus { border-color: #0a3d62; }
 
 .btn-danger:hover { background: #f9d7d4; }
 
+/* ── Compensation page extras ── */
+.renew-status {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #eafaf1;
+  color: #1e8449;
+}
+
+.success-msg {
+  display: none;
+  color: #1e8449;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  padding: 14px 16px;
+  background: #eafaf1;
+  border-radius: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+}
+
+.success-msg.show { display: block; }
+
 /* ── Table sections (læknatímar) ── */
 .table-section {
   max-width: 900px;
