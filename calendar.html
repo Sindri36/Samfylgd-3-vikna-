@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samfylgd – Dagatal</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="front-page.html">Samfylgd</a>
+  <nav>
+    <button onclick="window.location.href='my-pages.html'">Mínar síður</button>
+    <button class="primary" onclick="window.location.href='front-page.html'">Skrá út</button>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Dagatal</h1>
+    <p>Yfirlit yfir læknatíma og dagsetningar þegar lyfjaseðlar, vottorð og bætur renna út.</p>
+  </div>
+
+  <div class="cal-legend">
+    <span class="cal-dot cal-dot-appt"></span> Læknatími
+    <span class="cal-dot cal-dot-rx"></span> Lyfjaseðill rennur út
+    <span class="cal-dot cal-dot-cert"></span> Vottorð rennur út
+    <span class="cal-dot cal-dot-comp"></span> Bætur renna út
+  </div>
+
+  <div class="cal-wrapper">
+    <div class="cal-header">
+      <button class="cal-nav" id="prevMonth" aria-label="Fyrri mánuður">‹</button>
+      <h2 class="cal-month-label" id="monthLabel"></h2>
+      <button class="cal-nav" id="nextMonth" aria-label="Næsti mánuður">›</button>
+    </div>
+
+    <div class="cal-grid" id="calGrid">
+      <div class="cal-weekday">Mán</div>
+      <div class="cal-weekday">Þri</div>
+      <div class="cal-weekday">Mið</div>
+      <div class="cal-weekday">Fim</div>
+      <div class="cal-weekday">Fös</div>
+      <div class="cal-weekday">Lau</div>
+      <div class="cal-weekday">Sun</div>
+    </div>
+  </div>
+
+  <div class="cal-detail" id="detailPanel">
+    <h3 id="detailTitle">Veldu dagsetningu</h3>
+    <p class="cal-detail-empty" id="detailEmpty">Smelltu á dag í dagatalinu til að sjá það sem er á döfinni.</p>
+    <ul class="cal-event-list" id="detailList"></ul>
+  </div>
+
+  <div class="cal-detail" id="upcomingPanel">
+    <h3>Næstu viðburðir</h3>
+    <p class="cal-detail-empty" id="upcomingEmpty" style="display:none;">Engir viðburðir framundan.</p>
+    <ul class="cal-event-list cal-upcoming-list" id="upcomingList"></ul>
+  </div>
+</main>
+
+<script src="js/calendar.js"></script>
+</body>
+</html>
