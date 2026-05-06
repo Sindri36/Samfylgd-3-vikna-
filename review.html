@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samfylgd – Umsókn um umönnunarbætur</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="front-page.html">Samfylgd</a>
+  <nav>
+    <button onclick="window.location.href='compensation.html'">← Bætur</button>
+    <button onclick="window.location.href='my-pages.html'">Mínar síður</button>
+    <button class="primary" onclick="window.location.href='front-page.html'">Skrá út</button>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Umsókn um umönnunarbætur</h1>
+    <p>Fylltu út upplýsingar um foreldri, barn og umönnunarþörf. Þú getur vistað umsóknina og snúið aftur til að breyta henni hvenær sem er.</p>
+  </div>
+
+  <div class="review-status-bar">
+    <span class="review-status" id="reviewStatus">Drög</span>
+    <span class="review-saved-at" id="reviewSavedAt"></span>
+  </div>
+
+  <form id="reviewForm" class="review-form">
+
+    <section class="review-section">
+      <h2>Foreldri / forsjáraðili</h2>
+      <div class="review-grid">
+        <div class="form-group">
+          <label for="parentName">Nafn</label>
+          <input type="text" id="parentName" placeholder="Fullt nafn">
+        </div>
+        <div class="form-group">
+          <label for="parentKt">Kennitala</label>
+          <input type="text" id="parentKt" placeholder="000000-0000">
+        </div>
+        <div class="form-group">
+          <label for="parentAddress">Heimilisfang</label>
+          <input type="text" id="parentAddress" placeholder="Gata, póstnúmer, staður">
+        </div>
+        <div class="form-group">
+          <label for="parentPhone">Sími</label>
+          <input type="tel" id="parentPhone" placeholder="000 0000">
+        </div>
+        <div class="form-group review-grid-full">
+          <label for="parentEmail">Netfang</label>
+          <input type="text" id="parentEmail" placeholder="netfang@example.is">
+        </div>
+      </div>
+    </section>
+
+    <section class="review-section">
+      <h2>Barn</h2>
+      <div class="review-grid">
+        <div class="form-group">
+          <label for="childName">Nafn barns</label>
+          <input type="text" id="childName" placeholder="Fullt nafn">
+        </div>
+        <div class="form-group">
+          <label for="childKt">Kennitala barns</label>
+          <input type="text" id="childKt" placeholder="000000-0000">
+        </div>
+        <div class="form-group">
+          <label for="childRelation">Tengsl</label>
+          <select id="childRelation">
+            <option value="">Veldu...</option>
+            <option value="parent">Foreldri</option>
+            <option value="guardian">Forsjáraðili</option>
+            <option value="foster">Fósturforeldri</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="childLivesWith">Býr hjá umsækjanda</label>
+          <select id="childLivesWith">
+            <option value="">Veldu...</option>
+            <option value="yes">Já, allan tímann</option>
+            <option value="shared">Skipt forsjá</option>
+            <option value="no">Nei</option>
+          </select>
+        </div>
+      </div>
+    </section>
+
+    <section class="review-section">
+      <h2>Umönnunarþörf</h2>
+      <div class="review-grid">
+        <div class="form-group review-grid-full">
+          <label for="diagnosis">Sjúkdómur eða fötlun (greining)</label>
+          <input type="text" id="diagnosis" placeholder="t.d. einhverfurófsröskun, langvinn veikindi...">
+        </div>
+        <div class="form-group">
+          <label for="doctor">Læknir eða sjúkrastofnun</label>
+          <input type="text" id="doctor" placeholder="t.d. Greiningarstöð, Landspítali">
+        </div>
+        <div class="form-group">
+          <label for="hoursPerWeek">Áætlaður tímafjöldi á viku</label>
+          <input type="text" id="hoursPerWeek" placeholder="t.d. 25 klst.">
+        </div>
+        <div class="form-group review-grid-full">
+          <label for="careDescription">Lýsing á umönnun og daglegum aðstæðum</label>
+          <textarea id="careDescription" rows="5" placeholder="Lýstu hvað umönnunin felur í sér — t.d. hjálp við daglegar athafnir, læknistíma, sérkennslu, eftirlit..."></textarea>
+        </div>
+        <div class="form-group review-grid-full">
+          <label for="extraSupport">Önnur þjónusta sem barnið nýtur (valfrjálst)</label>
+          <textarea id="extraSupport" rows="3" placeholder="t.d. liðveisla, akstursþjónusta, sérdeild í skóla..."></textarea>
+        </div>
+      </div>
+    </section>
+
+    <section class="review-section">
+      <h2>Fylgigögn</h2>
+      <p class="review-help">Vottorð og greinargerðir eru sjálfvirkt fengin úr Vottorð síðunni. Þú getur breytt í fellilistanum hér fyrir neðan hverju á að vísa.</p>
+      <div class="form-group">
+        <label for="attachedCert">Vottorð sem fylgir umsókn</label>
+        <select id="attachedCert">
+          <option value="">Veldu...</option>
+          <option value="VT-7702">Örorkuvottorð (VT-7702)</option>
+          <option value="VT-7706">Færniskerðingarvottorð (VT-7706)</option>
+          <option value="VT-7701">Læknisvottorð (VT-7701)</option>
+          <option value="VT-7704">Sjúkdómsvottorð (VT-7704)</option>
+        </select>
+      </div>
+    </section>
+
+    <p class="success-msg" id="reviewSuccess">Umsókn vistuð.</p>
+    <p class="error" id="reviewError">Vinsamlegast fylltu út a.m.k. nafn foreldris, nafn barns og lýsingu á umönnun.</p>
+
+    <div class="review-actions">
+      <button type="button" class="btn-secondary" id="reviewSave">Vista drög</button>
+      <button type="button" class="btn-danger" id="reviewClear">Hreinsa</button>
+      <button type="button" class="submit-btn" id="reviewSubmit" style="margin-top:0; flex:1;">Senda umsókn</button>
+    </div>
+  </form>
+</main>
+
+<script src="js/review.js"></script>
+</body>
+</html>

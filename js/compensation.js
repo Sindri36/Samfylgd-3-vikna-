@@ -52,16 +52,21 @@ function renderTable() {
     const expiryDate = effectiveExpiry(comp);
     const renewed    = loadRenewal(comp.id);
 
-    const action = renewed
+    const renewLink = renewed
       ? `<span class="renew-status">Endurnýjað ${new Date(renewed.renewedOn).toLocaleDateString('is-IS')}</span>`
       : `<a href="#" class="rx-renew" data-id="${comp.id}">Endurnýja</a>`;
+
+    // Umönnunarbætur have an editable application form on review.html
+    const applyLink = comp.id === 'BT-3307'
+      ? ` <a href="review.html" class="rx-renew rx-apply">Opna umsókn</a>`
+      : '';
 
     const tr = document.createElement('tr');
     tr.innerHTML = `
       <td>${comp.name}</td>
       <td class="rx-id">${comp.id}</td>
       <td>${expiryBadge(expiryDate)}</td>
-      <td>${action}</td>
+      <td>${renewLink}${applyLink}</td>
     `;
     tbody.appendChild(tr);
   });

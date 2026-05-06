@@ -808,6 +808,113 @@ select:focus { border-color: #0a3d62; }
   align-self: center;
 }
 
+/* ── Review / application page ── */
+.review-status-bar {
+  max-width: 760px;
+  margin: 0 auto 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4px;
+}
+
+.review-status {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #eef2f7;
+  color: #5a6877;
+}
+
+.review-status-draft {
+  background: #fef5e7;
+  color: #d35400;
+}
+
+.review-status-submitted {
+  background: #eafaf1;
+  color: #1e8449;
+}
+
+.review-saved-at {
+  font-size: 13px;
+  color: #8a96a3;
+}
+
+.review-form {
+  max-width: 760px;
+  margin: 0 auto 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.review-section {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #eaedf1;
+  padding: 28px 32px;
+}
+
+.review-section h2 {
+  color: #0a3d62;
+  font-size: 18px;
+  margin-bottom: 18px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.review-help {
+  color: #5a6877;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.review-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.review-grid-full {
+  grid-column: 1 / -1;
+}
+
+.review-form input[type="text"],
+.review-form input[type="tel"],
+.review-form select,
+.review-form textarea {
+  font-size: 15px;
+  padding: 10px 14px;
+  letter-spacing: normal;
+}
+
+.review-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+
+.rx-apply {
+  margin-left: 6px;
+  border-bottom-style: solid;
+  border-bottom-color: #d35400;
+  color: #d35400;
+}
+
+.rx-apply:hover {
+  color: #a04000;
+  border-bottom-color: transparent;
+}
+
+@media (max-width: 600px) {
+  .review-grid { grid-template-columns: 1fr; }
+}
+
 /* ── Table sections (læknatímar) ── */
 .table-section {
   max-width: 900px;
