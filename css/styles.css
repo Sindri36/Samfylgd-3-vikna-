@@ -915,6 +915,95 @@ select:focus { border-color: #0a3d62; }
   .review-grid { grid-template-columns: 1fr; }
 }
 
+/* ── Folder (Mappa barnsins) ── */
+.folder-subhead {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5a6877;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 18px;
+  margin-bottom: 10px;
+}
+
+.folder-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.folder-empty {
+  font-size: 13px;
+  color: #8a96a3;
+  font-style: italic;
+  padding: 8px 0;
+}
+
+.folder-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr auto;
+  gap: 12px;
+  background: #fafbfc;
+  padding: 14px;
+  border-radius: 8px;
+  border: 1px solid #eef0f3;
+  align-items: end;
+}
+
+.folder-row .form-group {
+  margin: 0;
+}
+
+.folder-row label {
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #5a6877;
+}
+
+.folder-row input,
+.folder-row textarea {
+  font-size: 14px !important;
+  padding: 8px 10px !important;
+  letter-spacing: normal !important;
+}
+
+.btn-remove-row {
+  background: #fdedec;
+  border: none;
+  color: #c0392b;
+  font-size: 18px;
+  font-weight: 700;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: center;
+  transition: background 0.15s;
+}
+
+.btn-remove-row:hover { background: #f9d7d4; }
+
+.btn-add {
+  background: #eef4fa;
+  color: #0a3d62;
+  border: 1px dashed #0a3d62;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.15s;
+}
+
+.btn-add:hover { background: #dde8f3; }
+
+@media (max-width: 700px) {
+  .folder-row { grid-template-columns: 1fr; }
+  .btn-remove-row { width: 100%; align-self: stretch; }
+}
+
 /* ── Table sections (læknatímar) ── */
 .table-section {
   max-width: 900px;

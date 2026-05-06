@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samfylgd – Mappa barnsins</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="front-page.html">Samfylgd</a>
+  <nav>
+    <button onclick="window.location.href='my-pages.html'">Mínar síður</button>
+    <button class="primary" onclick="window.location.href='front-page.html'">Skrá út</button>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Mappa barnsins</h1>
+    <p>Stafræn mappa þar sem þú getur safnað upplýsingum um barnið. Það er engin krafa um að fylla út — bættu við eftir hentugleika og breyttu hvenær sem er.</p>
+  </div>
+
+  <div class="review-status-bar">
+    <span class="review-saved-at" id="folderSavedAt">Engar breytingar enn</span>
+    <button type="button" class="btn-danger" id="folderClear" style="padding:6px 12px; font-size:13px;">Hreinsa allt</button>
+  </div>
+
+  <p class="success-msg" id="folderSuccess">Vistað.</p>
+
+  <form id="folderForm" class="review-form">
+
+    <!-- ── 1. Grunnupplýsingar ── -->
+    <section class="review-section">
+      <h2>1. Grunnupplýsingar</h2>
+      <div class="review-grid">
+        <div class="form-group">
+          <label for="basicName">Nafn barnsins</label>
+          <input type="text" id="basicName" data-field="basics.name">
+        </div>
+        <div class="form-group">
+          <label for="basicBirthdate">Fæðingardagur</label>
+          <input type="text" id="basicBirthdate" placeholder="dd.mm.áááá" data-field="basics.birthdate">
+        </div>
+        <div class="form-group">
+          <label for="basicHeight">Hæð</label>
+          <input type="text" id="basicHeight" placeholder="t.d. 112 cm" data-field="basics.height">
+        </div>
+        <div class="form-group">
+          <label for="basicWeight">Þyngd</label>
+          <input type="text" id="basicWeight" placeholder="t.d. 21 kg" data-field="basics.weight">
+        </div>
+        <div class="form-group review-grid-full">
+          <label for="basicPersonality">Skapgerð og persónuleiki</label>
+          <textarea id="basicPersonality" rows="3" placeholder="t.d. feimin í nýjum aðstæðum, glaðlynd með fjölskyldu, líður vel í kunnuglegu umhverfi..." data-field="basics.personality"></textarea>
+        </div>
+        <div class="form-group review-grid-full">
+          <label for="basicFamily">Fjölskylduaðstæður</label>
+          <textarea id="basicFamily" rows="3" placeholder="t.d. tvö systkini, foreldrar í sambúð, býr hjá ömmu og afa á föstudögum..." data-field="basics.family"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 2. Heilsufar ── -->
+    <section class="review-section">
+      <h2>2. Heilsufar</h2>
+
+      <h3 class="folder-subhead">Greiningar og heilkenni</h3>
+      <div class="folder-list" id="diagnosesList"></div>
+      <button type="button" class="btn-add" data-list="diagnoses">+ Bæta við greiningu</button>
+
+      <h3 class="folder-subhead">Lyf</h3>
+      <div class="folder-list" id="medicationsList"></div>
+      <button type="button" class="btn-add" data-list="medications">+ Bæta við lyfi</button>
+    </section>
+
+    <!-- ── 3. Hjálpartæki og búnaður ── -->
+    <section class="review-section">
+      <h2>3. Hjálpartæki og búnaður</h2>
+      <div class="folder-list" id="equipmentList"></div>
+      <button type="button" class="btn-add" data-list="equipment">+ Bæta við hjálpartæki</button>
+    </section>
+
+    <!-- ── 4. Umönnun og samskipti ── -->
+    <section class="review-section">
+      <h2>4. Umönnun og samskipti</h2>
+      <div class="review-grid">
+        <div class="form-group review-grid-full">
+          <label for="careDistraction">Aðferðir til að dreifa athygli (t.d. við sársauka eða læknistíma)</label>
+          <textarea id="careDistraction" rows="3" placeholder="t.d. uppáhalds söngur, lítið leikfang, telja saman..." data-field="care.distraction"></textarea>
+        </div>
+        <div class="form-group review-grid-full">
+          <label for="careCommunication">Samskiptaaðferðir</label>
+          <textarea id="careCommunication" rows="3" placeholder="t.d. notar tákn, þarf rólega rödd, betra að segja eitt í einu..." data-field="care.communication"></textarea>
+        </div>
+        <div class="form-group review-grid-full">
+          <label for="careCalming">Hvað róar barnið</label>
+          <textarea id="careCalming" rows="3" placeholder="t.d. kunnuglegir hlutir, dempt ljós, ákveðið teppi..." data-field="care.calming"></textarea>
+        </div>
+        <div class="form-group review-grid-full">
+          <label for="careAvoid">Hvað á að forðast</label>
+          <textarea id="careAvoid" rows="3" placeholder="t.d. há hljóð, snögg snerting, ákveðin matvæli..." data-field="care.avoid"></textarea>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. Tengiliðir og saga ── -->
+    <section class="review-section">
+      <h2>5. Tengiliðir og saga</h2>
+
+      <h3 class="folder-subhead">Mikilvægir tengiliðir</h3>
+      <div class="folder-list" id="contactsList"></div>
+      <button type="button" class="btn-add" data-list="contacts">+ Bæta við tengilið</button>
+
+      <h3 class="folder-subhead">Fyrri aðgerðir og atburðir</h3>
+      <div class="folder-list" id="proceduresList"></div>
+      <button type="button" class="btn-add" data-list="procedures">+ Bæta við atburði</button>
+
+      <h3 class="folder-subhead">Framfarir í þroska</h3>
+      <div class="form-group">
+        <textarea id="historyMilestones" rows="4" placeholder="Nótur um þroska með tímanum — bættu við eftir hentugleika..." data-field="history.milestones"></textarea>
+      </div>
+    </section>
+
+  </form>
+</main>
+
+<script src="js/folder.js"></script>
+</body>
+</html>
