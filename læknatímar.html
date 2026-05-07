@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samfylgd – Læknatímar</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="front-page.html">Samfylgd</a>
+  <nav>
+    <button onclick="window.location.href='minar-sidur.html'">Mínar síður</button>
+    <button class="primary" onclick="window.location.href='front-page.html'">Skrá út</button>
+  </nav>
+</header>
+
+<main>
+  <div class="hero">
+    <h1>Læknatímar</h1>
+    <p>Yfirlit yfir læknatíma.</p>
+  </div>
+
+  <div class="table-section">
+    <h2 class="table-heading">Komandi tímar</h2>
+    <div class="table-wrapper">
+      <table class="rx-table">
+        <thead>
+          <tr>
+            <th>Dagsetning</th>
+            <th>Tími</th>
+            <th>Læknir</th>
+            <th>Tegund</th>
+            <th>Staðsetning</th>
+          </tr>
+        </thead>
+        <tbody id="upcomingBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="table-section">
+    <h2 class="table-heading">Fyrri tímar</h2>
+    <div class="table-wrapper">
+      <table class="rx-table">
+        <thead>
+          <tr>
+            <th>Dagsetning</th>
+            <th>Tími</th>
+            <th>Læknir</th>
+            <th>Tegund</th>
+            <th>Staðsetning</th>
+          </tr>
+        </thead>
+        <tbody id="pastBody"></tbody>
+      </table>
+    </div>
+  </div>
+
+</main>
+
+<script src="js/læknatímar.js"></script>
+</body>
+</html>
