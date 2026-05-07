@@ -221,7 +221,7 @@ function formatLong(key) {
 }
 
 const eventTypeLabel = {
-  appt: 'Læknatími',
+  appt: 'Tímabókun',
   rx:   'Lyfjaseðill',
   cert: 'Vottorð',
   comp: 'Bætur',

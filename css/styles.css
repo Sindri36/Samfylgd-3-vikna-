@@ -1059,7 +1059,7 @@ input[type="time"] {
 input[type="date"]:focus,
 input[type="time"]:focus { border-color: #0a3d62; }
 
-/* ── Table sections (læknatímar) ── */
+/* ── Table sections (tímabókanir) ── */
 .table-section {
   max-width: 900px;
   margin: 0 auto 40px;
