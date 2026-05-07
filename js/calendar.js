@@ -71,6 +71,19 @@ function buildEvents() {
     });
   });
 
+  // User-booked appointments from localStorage
+  try {
+    const raw = localStorage.getItem('samfylgd:booked-appointments');
+    const bookings = raw ? JSON.parse(raw) : [];
+    bookings.forEach((b) => {
+      add(b.date, {
+        type: 'appt',
+        label: `${b.time} — ${b.type} (bókað)`,
+        detail: `${b.doctor}, ${b.location}`,
+      });
+    });
+  } catch { /* ignore */ }
+
   calPrescriptions.forEach((rx) => {
     add(rx.expiry, {
       type: 'rx',

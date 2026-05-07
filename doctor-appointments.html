@@ -22,6 +22,10 @@
     <p>Yfirlit yfir komandi og fyrri læknatíma.</p>
   </div>
 
+  <div class="appt-actions">
+    <button type="button" class="submit-btn" id="openBooking" style="margin-top:0; width:auto; padding:12px 22px;">+ Bóka nýjan tíma</button>
+  </div>
+
   <div class="table-section">
     <h2 class="table-heading">Komandi tímar</h2>
     <div class="table-wrapper">
@@ -59,6 +63,73 @@
   </div>
 
 </main>
+
+<!-- ── Booking modal ── -->
+<div class="modal-overlay" id="bookingModal">
+  <div class="modal">
+    <button class="close" id="bookingClose" aria-label="Loka">×</button>
+    <h2>Bóka læknatíma</h2>
+    <p class="sub">Fylltu út upplýsingarnar og bókaðu tímann.</p>
+
+    <form id="bookingForm" class="renew-form">
+      <div class="form-group">
+        <label for="bookType">Tegund</label>
+        <select id="bookType" required>
+          <option value="">Veldu tegund...</option>
+          <option>Almenn skoðun</option>
+          <option>Blóðprufa</option>
+          <option>Eftirlit</option>
+          <option>Röntgenmynd</option>
+          <option>Bólusetning</option>
+          <option>Sérfræðiráðgjöf</option>
+          <option>Annað</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="bookDoctor">Læknir</label>
+        <input type="text" id="bookDoctor" placeholder="t.d. Dr. Anna Kristjánsdóttir" list="doctorList" required>
+        <datalist id="doctorList">
+          <option value="Dr. Sigríður Björnsdóttir"></option>
+          <option value="Dr. Gunnar Helgason"></option>
+          <option value="Dr. Anna Kristjánsdóttir"></option>
+          <option value="Dr. Páll Einarsson"></option>
+          <option value="Dr. Helga Sveinsdóttir"></option>
+          <option value="Dr. Jón Þorsteinsson"></option>
+        </datalist>
+      </div>
+
+      <div class="form-group">
+        <label for="bookLocation">Staðsetning</label>
+        <input type="text" id="bookLocation" placeholder="t.d. Heilsugæslan Árbær" list="locationList" required>
+        <datalist id="locationList">
+          <option value="Heilsugæslan Árbær"></option>
+          <option value="Heilsugæslan Breiðholt"></option>
+          <option value="Heilsugæslan Garðabæ"></option>
+          <option value="Heilsugæslan Mjódd"></option>
+          <option value="Landspítali"></option>
+          <option value="Reykjalundur"></option>
+        </datalist>
+      </div>
+
+      <div class="review-grid">
+        <div class="form-group">
+          <label for="bookDate">Dagsetning</label>
+          <input type="date" id="bookDate" required>
+        </div>
+        <div class="form-group">
+          <label for="bookTime">Tími</label>
+          <input type="time" id="bookTime" required>
+        </div>
+      </div>
+
+      <p class="error" id="bookError">Vinsamlegast fylltu út öll svæði.</p>
+      <p class="success-msg" id="bookSuccess">Tími bókaður.</p>
+
+      <button type="submit" class="submit-btn">Bóka tíma</button>
+    </form>
+  </div>
+</div>
 
 <script src="js/doctor-appointments.js"></script>
 </body>

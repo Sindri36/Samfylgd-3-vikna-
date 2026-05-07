@@ -1004,6 +1004,61 @@ select:focus { border-color: #0a3d62; }
   .btn-remove-row { width: 100%; align-self: stretch; }
 }
 
+/* ── Doctor appointments: booking action ── */
+.appt-actions {
+  max-width: 900px;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.booked-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  background: #eef4fa;
+  color: #0a3d62;
+  margin-left: 6px;
+  letter-spacing: 0.3px;
+}
+
+.cancel-booking {
+  background: transparent;
+  border: 1px solid #e3e6ea;
+  color: #c0392b;
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+  margin-left: 8px;
+  vertical-align: middle;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.cancel-booking:hover {
+  background: #fdedec;
+  border-color: #c0392b;
+}
+
+input[type="date"],
+input[type="time"] {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 15px;
+  border: 2px solid #d8dde3;
+  border-radius: 8px;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.15s;
+}
+
+input[type="date"]:focus,
+input[type="time"]:focus { border-color: #0a3d62; }
+
 /* ── Table sections (læknatímar) ── */
 .table-section {
   max-width: 900px;
