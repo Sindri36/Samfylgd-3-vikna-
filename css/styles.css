@@ -1059,6 +1059,174 @@ input[type="time"] {
 input[type="date"]:focus,
 input[type="time"]:focus { border-color: #0a3d62; }
 
+/* ── Rights page (master-detail) ── */
+.rights-layout {
+  max-width: 1000px;
+  margin: 0 auto 60px;
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: 24px;
+  align-items: start;
+}
+
+.rights-detail {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #eaedf1;
+  padding: 32px 36px;
+  min-height: 360px;
+}
+
+.rights-empty {
+  color: #8a96a3;
+  font-size: 15px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.rights-detail-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #eef0f3;
+}
+
+.rights-detail-icon {
+  font-size: 36px;
+  line-height: 1;
+}
+
+.rights-detail h2 {
+  font-size: 24px;
+  color: #0a3d62;
+  font-weight: 700;
+}
+
+.rights-summary {
+  font-size: 16px;
+  color: #3a4a5a;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+.rights-subhead {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #5a6877;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.rights-includes {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.rights-includes li {
+  position: relative;
+  padding-left: 22px;
+  font-size: 15px;
+  color: #3a4a5a;
+  line-height: 1.5;
+}
+
+.rights-includes li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #1e8449;
+  font-weight: 700;
+}
+
+.rights-where {
+  font-size: 15px;
+  color: #3a4a5a;
+  line-height: 1.6;
+}
+
+/* ── Rights list (right sidebar) ── */
+.rights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border: 1px solid #eaedf1;
+  padding: 12px;
+  position: sticky;
+  top: 20px;
+}
+
+.rights-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fafbfc;
+  border: 1.5px solid #dde3ec;
+  border-radius: 8px;
+  padding: 14px 16px;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  transition: background 0.15s, border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+
+.rights-item:hover {
+  background: #f4f6f9;
+  border-color: #0a3d62;
+  transform: translateX(-2px);
+  box-shadow: 0 3px 8px rgba(10, 61, 98, 0.12);
+}
+
+.rights-item-active {
+  background: #eef4fa;
+  border-color: #0a3d62;
+  border-width: 2px;
+  box-shadow: 0 3px 10px rgba(10, 61, 98, 0.18);
+}
+
+.rights-item-active:hover {
+  transform: none;
+}
+
+.rights-item-icon {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.rights-item-name {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 500;
+  flex: 1;
+}
+
+.rights-item-active .rights-item-name {
+  color: #0a3d62;
+  font-weight: 600;
+}
+
+@media (max-width: 800px) {
+  .rights-layout {
+    grid-template-columns: 1fr;
+  }
+  .rights-list {
+    position: static;
+    order: -1;
+  }
+}
+
 /* ── Table sections (tímabókanir) ── */
 .table-section {
   max-width: 900px;
