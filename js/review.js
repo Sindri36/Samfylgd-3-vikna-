@@ -2,6 +2,32 @@
 const REVIEW_DRAFT_KEY     = 'samfylgd:review-draft';
 const REVIEW_SUBMITTED_KEY = 'samfylgd:review-submitted';
 
+// ── Certificates list (mirror of data in js/certificates.js) ──
+// If a new certificate is added in certificates.js, also add it here so it
+// shows up in the "Vottorð sem fylgir umsókn" dropdown.
+const REVIEW_CERTIFICATES = [
+  { name: 'Læknisvottorð',          id: 'VT-7701' },
+  { name: 'Örorkuvottorð',          id: 'VT-7702' },
+  { name: 'Vinnufærnisvottorð',     id: 'VT-7703' },
+  { name: 'Sjúkdómsvottorð',        id: 'VT-7704' },
+  { name: 'Endurhæfingarvottorð',   id: 'VT-7705' },
+  { name: 'Færniskerðingarvottorð', id: 'VT-7706' },
+];
+
+function populateCertOptions() {
+  const select = document.getElementById('attachedCert');
+  if (!select) return;
+  select.innerHTML = '<option value="">Veldu...</option>';
+  REVIEW_CERTIFICATES.forEach((cert) => {
+    const opt = document.createElement('option');
+    opt.value = cert.id;
+    opt.textContent = `${cert.name} (${cert.id})`;
+    select.appendChild(opt);
+  });
+}
+
+populateCertOptions();
+
 // ── Field IDs that are part of the form ──
 const FIELDS = [
   'parentName', 'parentKt', 'parentAddress', 'parentPhone', 'parentEmail',

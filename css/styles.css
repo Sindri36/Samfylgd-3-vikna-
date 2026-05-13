@@ -1192,14 +1192,66 @@ input[type="time"]:focus { border-color: #0a3d62; }
 .rights-list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 14px;
   background: white;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   border: 1px solid #eaedf1;
-  padding: 12px;
+  padding: 14px;
   position: sticky;
   top: 20px;
+}
+
+.rights-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rights-group-header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f4f6f9;
+  color: #0a3d62;
+  border: 1.5px solid #dde3ec;
+  border-radius: 8px;
+  padding: 12px 14px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: left;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.rights-group-header:hover {
+  background: #eef4fa;
+  border-color: #0a3d62;
+}
+
+.rights-group-header-expanded {
+  background: #eef4fa;
+  border-color: #0a3d62;
+}
+
+.rights-group-chevron {
+  font-size: 16px;
+  transition: transform 0.2s;
+  color: #0a3d62;
+}
+
+.rights-group-header-expanded .rights-group-chevron {
+  transform: rotate(180deg);
+}
+
+.rights-group-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-left: 4px;
 }
 
 .rights-item {
